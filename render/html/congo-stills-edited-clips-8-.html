@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    <style type="text/css">
+    .thumb-sm {
+        background-color: gray;
+        width: 200px;
+        height: 133px;
+    }
+    .dadOverlay {
+        border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+<h1>congo-stills-edited-clips-8</h1><h2>April 16, 2001</h2><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_001.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_002.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=30"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_003.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=45"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_004.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=60"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_005.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=75"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_006.jpg"/></a><a href="https://www.youtube.com/watch?v=Dye1oRVg5Co&t=90"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-28-28_007.jpg"/></a><a href="https://www.youtube.com/watch?v=llx28w1bMME&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-32-51_001.jpg"/></a><a href="https://www.youtube.com/watch?v=llx28w1bMME&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-32-51_002.jpg"/></a><a href="https://www.youtube.com/watch?v=v3ywjj7qz5Q&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/congo-stills-edited-clips-8-2001.04.16_20-35-06_001.jpg"/></a>
+    <script type="text/javascript">
+    var mouseX, mouseY;
+    (function() {
+        $(document).mousemove(function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        $('.thumb-sm')
+        .mouseover(function() {
+            var left = (mouseX > (window.innerWidth / 2)) ? 20 : window.innerWidth - 750;
+            var top = (mouseY > ($(window).scrollTop() + (window.innerHeight / 2))) ? $(window).scrollTop() + 20 : $(window).scrollTop() + window.innerHeight - 500;
+
+            var newElement = $('<img class="dadOverlay" style="position:absolute; top: ' + top + 'px; left: ' + left + 'px" src="' + this.src.replace('thumbs-small', 'thumbs') + '" />');
+            this.dadOverlay = $('body').append(newElement);
+        })
+        .mouseout(function() {
+            $('.dadOverlay').remove();
+        });
+    })();
+    </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    <style type="text/css">
+    .thumb-sm {
+        background-color: gray;
+        width: 200px;
+        height: 133px;
+    }
+    .dadOverlay {
+        border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+<h1>dan-sach-project</h1><h2>January 29, 2005</h2><a href="https://www.youtube.com/watch?v=ptS8R0-VF0E&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-30-56_001.jpg"/></a><a href="https://www.youtube.com/watch?v=C59ak9Kpn70&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-33-38_001.jpg"/></a><a href="https://www.youtube.com/watch?v=C59ak9Kpn70&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-33-38_002.jpg"/></a><a href="https://www.youtube.com/watch?v=3lOwjktrKP4&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-34-34_001.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_001.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_002.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=30"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_003.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=45"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_004.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=60"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_005.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=75"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_006.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=90"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_007.jpg"/></a><a href="https://www.youtube.com/watch?v=6uvWeYI1DRU&t=105"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sach-project-2005.01.29_16-42-02_008.jpg"/></a>
+    <script type="text/javascript">
+    var mouseX, mouseY;
+    (function() {
+        $(document).mousemove(function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        $('.thumb-sm')
+        .mouseover(function() {
+            var left = (mouseX > (window.innerWidth / 2)) ? 20 : window.innerWidth - 750;
+            var top = (mouseY > ($(window).scrollTop() + (window.innerHeight / 2))) ? $(window).scrollTop() + 20 : $(window).scrollTop() + window.innerHeight - 500;
+
+            var newElement = $('<img class="dadOverlay" style="position:absolute; top: ' + top + 'px; left: ' + left + 'px" src="' + this.src.replace('thumbs-small', 'thumbs') + '" />');
+            this.dadOverlay = $('body').append(newElement);
+        })
+        .mouseout(function() {
+            $('.dadOverlay').remove();
+        });
+    })();
+    </script>
+    </body>
+</html>

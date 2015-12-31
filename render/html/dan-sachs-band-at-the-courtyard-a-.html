@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    <style type="text/css">
+    .thumb-sm {
+        background-color: gray;
+        width: 200px;
+        height: 133px;
+    }
+    .dadOverlay {
+        border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+<h1>dan-sachs-band-at-the-courtyard-a</h1><h2>January 15, 2000</h2><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_001.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_002.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=30"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_003.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=45"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_004.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=60"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_005.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=75"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_006.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=90"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_007.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=105"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_008.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=120"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_009.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=135"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_010.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=150"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_011.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=165"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_012.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=180"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_013.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=195"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_014.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=210"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_015.jpg"/></a><a href="https://www.youtube.com/watch?v=jY2N10qN_Lo&t=225"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/dan-sachs-band-at-the-courtyard-a-2000.01.15_21-00-00_016.jpg"/></a>
+    <script type="text/javascript">
+    var mouseX, mouseY;
+    (function() {
+        $(document).mousemove(function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        $('.thumb-sm')
+        .mouseover(function() {
+            var left = (mouseX > (window.innerWidth / 2)) ? 20 : window.innerWidth - 750;
+            var top = (mouseY > ($(window).scrollTop() + (window.innerHeight / 2))) ? $(window).scrollTop() + 20 : $(window).scrollTop() + window.innerHeight - 500;
+
+            var newElement = $('<img class="dadOverlay" style="position:absolute; top: ' + top + 'px; left: ' + left + 'px" src="' + this.src.replace('thumbs-small', 'thumbs') + '" />');
+            this.dadOverlay = $('body').append(newElement);
+        })
+        .mouseout(function() {
+            $('.dadOverlay').remove();
+        });
+    })();
+    </script>
+    </body>
+</html>

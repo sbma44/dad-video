@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    <style type="text/css">
+    .thumb-sm {
+        background-color: gray;
+        width: 200px;
+        height: 133px;
+    }
+    .dadOverlay {
+        border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+<h1>congo-2-els-africa</h1><h2>January 15, 2000</h2>
+    <script type="text/javascript">
+    var mouseX, mouseY;
+    (function() {
+        $(document).mousemove(function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        $('.thumb-sm')
+        .mouseover(function() {
+            var left = (mouseX > (window.innerWidth / 2)) ? 20 : window.innerWidth - 750;
+            var top = (mouseY > ($(window).scrollTop() + (window.innerHeight / 2))) ? $(window).scrollTop() + 20 : $(window).scrollTop() + window.innerHeight - 500;
+
+            var newElement = $('<img class="dadOverlay" style="position:absolute; top: ' + top + 'px; left: ' + left + 'px" src="' + this.src.replace('thumbs-small', 'thumbs') + '" />');
+            this.dadOverlay = $('body').append(newElement);
+        })
+        .mouseout(function() {
+            $('.dadOverlay').remove();
+        });
+    })();
+    </script>
+    </body>
+</html>

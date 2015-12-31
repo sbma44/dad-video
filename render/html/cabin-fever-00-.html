@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    <style type="text/css">
+    .thumb-sm {
+        background-color: gray;
+        width: 200px;
+        height: 133px;
+    }
+    .dadOverlay {
+        border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+<h1>cabin-fever-00</h1><h2>January 29, 2000</h2><a href="https://www.youtube.com/watch?v=ILWGmwawU8I&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-16-16_001.jpg"/></a><a href="https://www.youtube.com/watch?v=rm-lssl8RXA&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-16-46_001.jpg"/></a><a href="https://www.youtube.com/watch?v=76cgvieliDs&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-18-55_001.jpg"/></a><a href="https://www.youtube.com/watch?v=pf-vgPgLnjE&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-19-19_001.jpg"/></a><a href="https://www.youtube.com/watch?v=bnOTzQQFPCY&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-21-24_001.jpg"/></a><a href="https://www.youtube.com/watch?v=l-SSEEMm1WI&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-22-52_001.jpg"/></a><a href="https://www.youtube.com/watch?v=aDzEu3GkBW8&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-23-50_001.jpg"/></a><a href="https://www.youtube.com/watch?v=PadRv_PALqU&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-23-13_001.jpg"/></a><a href="https://www.youtube.com/watch?v=6GbhARKam7c&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-24-40_001.jpg"/></a><a href="https://www.youtube.com/watch?v=6GbhARKam7c&t=15"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-24-40_002.jpg"/></a><a href="https://www.youtube.com/watch?v=6GbhARKam7c&t=30"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-24-40_003.jpg"/></a><a href="https://www.youtube.com/watch?v=6GbhARKam7c&t=45"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-24-40_004.jpg"/></a><a href="https://www.youtube.com/watch?v=6GbhARKam7c&t=60"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-24-40_005.jpg"/></a><a href="https://www.youtube.com/watch?v=GsQFEXnLuRM&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-26-17_001.jpg"/></a><a href="https://www.youtube.com/watch?v=l3eEg_HLIV0&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-27-15_001.jpg"/></a><a href="https://www.youtube.com/watch?v=Fgiw6n4Hp7U&t=0"><img class="thumb-sm" src="https://s3.amazonaws.com/sbma44-dadvideo/thumbs-small/cabin-fever-00-2000.01.29_16-28-09_001.jpg"/></a><h2>February 05, 2000</h2>
+    <script type="text/javascript">
+    var mouseX, mouseY;
+    (function() {
+        $(document).mousemove(function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        $('.thumb-sm')
+        .mouseover(function() {
+            var left = (mouseX > (window.innerWidth / 2)) ? 20 : window.innerWidth - 750;
+            var top = (mouseY > ($(window).scrollTop() + (window.innerHeight / 2))) ? $(window).scrollTop() + 20 : $(window).scrollTop() + window.innerHeight - 500;
+
+            var newElement = $('<img class="dadOverlay" style="position:absolute; top: ' + top + 'px; left: ' + left + 'px" src="' + this.src.replace('thumbs-small', 'thumbs') + '" />');
+            this.dadOverlay = $('body').append(newElement);
+        })
+        .mouseout(function() {
+            $('.dadOverlay').remove();
+        });
+    })();
+    </script>
+    </body>
+</html>
